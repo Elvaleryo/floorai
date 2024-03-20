@@ -3,17 +3,17 @@ import { createTheme, lighten, darken } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      light: '#63ccff',
-      main: '#1890FF',
-      dark: '#006db3',
+      light: '#0000b2',
+      main: '#000077',
+      dark: '#000029',
     },
     text: {
-      primary: '#425466',
-      secondary: '#16192C',
+      primary: '#fff',
+      secondary: '#9a99aa',
     },
   },
   typography: {
-    fontFamily: "'Inter', sans-serif",
+    fontFamily: "'Roboto', sans-serif",
   },
   shape: {
     borderRadius: 8,
@@ -160,7 +160,6 @@ const theme = createTheme({
       styleOverrides: {
         body2: {
           fontSize: '0.75rem',
-          color: '#425466',
         },
       },
     },

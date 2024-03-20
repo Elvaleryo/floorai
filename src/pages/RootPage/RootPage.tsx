@@ -2,6 +2,7 @@ import React from 'react';
 import { styled } from '@mui/material/styles';
 import generateUtilityClasses from '@mui/material/generateUtilityClasses';
 import Header from 'components/common/Header';
+import Footer from '../../components/common/Footer';
 
 interface Props {
   children: React.ReactNode;
@@ -13,6 +14,7 @@ export const RootPage: React.FC<Props> = ({ children }) => {
       <div className={classes.app}>
         <Header />
         <main className={classes.main}>{children}</main>
+        <Footer />
       </div>
     </StyledRoot>
   );
@@ -27,11 +29,11 @@ const StyledRoot = styled('div')(({ theme }) => ({
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
+    background: theme.palette.primary.dark,
+    // padding: theme.spacing(0, 10),
   },
   [`& .${classes.main}`]: {
     flex: 1,
-    padding: theme.spacing(4, 3),
-    background: '#f7fafc',
     [`&.main-transparent-bg`]: {
       background: 'transparent',
     },

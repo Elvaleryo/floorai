@@ -1,19 +1,15 @@
-import { styled } from '@mui/material/styles';
-// import generateUtilityClasses from '@mui/material/generateUtilityClasses';
+import Introduction from 'components/main/home/Introduction';
+import WhoWeAre from 'components/main/home/WhoWeAre';
+import HowItWorks from 'components/main/home/HowItWorks';
 
-// const classes = generateUtilityClasses('RootPage', ['drawer', 'app', 'main']);
-
-const StyledRoot = styled('div')(() => ({
-  display: 'flex',
-  minHeight: '100vh',
-}));
-
-export const RootPage = () => {
+export const HomePage = () => {
   return (
-    <StyledRoot>
-      <h1>HOME</h1>
-    </StyledRoot>
+    <>
+      <Introduction />
+      <WhoWeAre />
+      <HowItWorks />
+    </>
   );
 };
 
-export default RootPage;
+export default HomePage;
