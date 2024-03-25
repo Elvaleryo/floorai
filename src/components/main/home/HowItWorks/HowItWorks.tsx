@@ -6,7 +6,7 @@ import whowe from 'assets/images/whowe.png';
 
 export const HowItWorks = () => {
   return (
-    <StyledGrid container justifyContent="center" alignItems="center" flexDirection="column" spacing={2}>
+    <StyledGrid id="howItWorks" container justifyContent="center" alignItems="center" flexDirection="column" spacing={2}>
       <Grid item xs={8}>
         <Typography variant="h5" sx={{ paddingBottom: '16px'}}>
           How It Works?
@@ -31,7 +31,7 @@ const StyledGrid = styled(Grid)(() => ({
   minHeight: '100vh',
   position: 'relative',
   backgroundColor: 'rgb(0,0,41)',
-  background: 'linear-gradient(180deg, rgba(7,7,96,1) 0%, rgba(0,0,41,1) 44%)',
+  background: 'linear-gradient(180deg, rgba(0,0,41,1) 0%, rgba(7,7,96,1) 44%)',
   textAlign: 'center',
   [`& .${classes.img}`]: {
     width: '88%',

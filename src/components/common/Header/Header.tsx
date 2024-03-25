@@ -9,8 +9,16 @@ import logo from 'assets/images/logo.png';
 const Header = () => {
   const headNav = [
     {
-      label: 'About',
-      href: '#about'
+      label: 'How it works',
+      href: '#howItWorks'
+    },
+    {
+      label: 'Road map',
+      href: '#roadMap'
+    },
+    {
+      label: 'Who we are',
+      href: '#whoWeAre'
     }
   ]
   return (
@@ -19,22 +27,24 @@ const Header = () => {
         <img className={classes.logo} src={logo} alt="logo" />
       </Grid>
       <Grid item>
-        {headNav.map((nav) => (
-          <Link to={nav.href}>
-            <Typography variant="subtitle1" className={classes.navItem}>{nav.label}</Typography>
-          </Link>
-        ))}
-      </Grid>
-      <Grid item>
-        <a href="#">
-          <TwitterIcon sx={{fill: '#fff'}} />
-        </a>
+        <div className={classes.menu}>
+          <div className={classes.navWrap}>
+            {headNav.map((nav) => (
+              <Link to={nav.href}>
+                <Typography variant="subtitle1" className={classes.navItem}>{nav.label}</Typography>
+              </Link>
+            ))}
+          </div>
+          <a target="_blank" href="https://twitter.com/FloorAIApp">
+            <TwitterIcon sx={{fill: '#fff'}} />
+          </a>
+        </div>
       </Grid>
     </StyledGrid>
   );
 };
 
-const classes = generateUtilityClasses('Header', ['navItem', 'logo']);
+const classes = generateUtilityClasses('Header', ['menu', 'navWrap', 'navItem', 'logo']);
 
 const StyledGrid = styled(Grid)(({ theme }) => ({
   height: '80px',
@@ -45,6 +55,14 @@ const StyledGrid = styled(Grid)(({ theme }) => ({
   },
   [`& .${classes.logo}`]: {
     width: 40,
+  },
+  [`& .${classes.menu}`]: {
+    display: 'flex',
+  },
+  [`& .${classes.navWrap}`]: {
+    display: 'flex',
+    gap: theme.spacing(3),
+    marginRight: theme.spacing(10),
   },
   [`& .${classes.navItem}`]: {
     textDecoration: 'none',

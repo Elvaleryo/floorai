@@ -6,7 +6,7 @@ import whowe from 'assets/images/whowe.png';
 
 export const WhoWeAre = () => {
   return (
-    <StyledGrid container justifyContent="center" alignItems="center" spacing={2}>
+    <StyledGrid id="whoWeAre" container justifyContent="center" alignItems="center" spacing={2}>
       <Grid item xs={6}>
         <img className={classes.img} src={whowe} alt="who we are" />
       </Grid>

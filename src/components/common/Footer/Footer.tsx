@@ -15,7 +15,7 @@ const Footer = () => {
         </Typography>
       </Grid>
       <Grid item>
-        <a href="#">
+        <a target="_blank" href="https://twitter.com/FloorAIApp">
           <TwitterIcon sx={{fill: '#fff'}} />
         </a>
       </Grid>
